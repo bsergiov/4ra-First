@@ -24,11 +24,26 @@ class MainViewController: UIViewController {
     
     // MARK: - UI Elements
     
+    lazy private var temproryButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.addTarget(self, action: #selector(goGame), for: .touchUpInside)
+        button.setTitle("Go to Game", for: .normal)
+        button.titleLabel?.textColor = .specialBlue
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupConsraints()
+    }
+    
+    // MARK: - UI Action
+    @objc private func goGame() {
+        let vc = GameViewController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -36,13 +51,19 @@ class MainViewController: UIViewController {
 extension MainViewController {
     private func setupView() {
         view.backgroundColor = .yellow
+        view.addSubview(temproryButton)
     }
 }
 
 // MARK: - Setup Constraints
 extension MainViewController {
     private func setupConsraints() {
-        
+        NSLayoutConstraint.activate([
+            temproryButton.heightAnchor.constraint(equalToConstant: 40),
+            temproryButton.widthAnchor.constraint(equalToConstant: 100),
+            temproryButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            temproryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
     }
 }
 
