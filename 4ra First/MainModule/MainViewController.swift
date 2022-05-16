@@ -9,7 +9,7 @@ import UIKit
 
 //подписывается view
 protocol MainViewInputProtocol: AnyObject {
-    func setGames(_ games: [Games])
+    func setGames(_ games: [Game])
 }
 
 //подписывается Presenter
@@ -69,7 +69,7 @@ extension MainViewController {
 
 // MARK: - MainViewInputProtocol
 extension MainViewController: MainViewInputProtocol {
-    func setGames(_ games: [Games]) {
+    func setGames(_ games: [Game]) {
         
     }
 }

@@ -8,18 +8,21 @@
 import UIKit
 
 //view
-protocol GameInputProtocol: AnyObject {
+protocol GameViewInputProtocol: AnyObject {
     func setTitle(_ title: String)
 }
 
 //presenter
-protocol GameOutputProtocol: AnyObject {
-    var game: Games { get set }
-    
+protocol GameViewOutputProtocol: AnyObject {
+    init(view: GameViewInputProtocol)
+    func showDetail()
 }
 
 class GameViewController: UIViewController {
 
+    // MARK: - Public Properties
+    var presenter: GameViewOutputProtocol!
+    
     // MARK: - UI Elements
     lazy private var titleLabel: UILabel = {
         let label = UILabel()
@@ -43,6 +46,8 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
+        
+        presenter.showDetail()
     }
 }
 
@@ -74,7 +79,7 @@ extension GameViewController {
     }
 }
 
-extension GameViewController: GameInputProtocol {
+extension GameViewController: GameViewInputProtocol {
     func setTitle(_ title: String) {
         titleLabel.text = title
     }
