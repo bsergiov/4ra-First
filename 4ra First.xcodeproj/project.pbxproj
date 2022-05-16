@@ -11,6 +11,15 @@
 		CC9A33E1283257FA003C3AA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A33E0283257FA003C3AA0 /* SceneDelegate.swift */; };
 		CC9A33E3283257FA003C3AA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9A33E2283257FA003C3AA0 /* MainViewController.swift */; };
 		CC9A33E828325801003C3AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9A33E728325801003C3AA0 /* Assets.xcassets */; };
+		CCD68AF32832768B006742AF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AF22832768B006742AF /* MainPresenter.swift */; };
+		CCD68AF52832769E006742AF /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AF42832769E006742AF /* MainInteractor.swift */; };
+		CCD68AF7283276B2006742AF /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AF6283276B2006742AF /* MainRouter.swift */; };
+		CCD68AF9283277F7006742AF /* MainConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AF8283277F7006742AF /* MainConfigurator.swift */; };
+		CCD68AFB2832786A006742AF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AFA2832786A006742AF /* Game.swift */; };
+		CCD68AFE28328055006742AF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AFD28328055006742AF /* GameViewController.swift */; };
+		CCD68B0028328070006742AF /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68AFF28328070006742AF /* GamePresenter.swift */; };
+		CCD68B022832807D006742AF /* GameIneteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68B012832807D006742AF /* GameIneteractor.swift */; };
+		CCD68B042832809F006742AF /* GameConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD68B032832809F006742AF /* GameConfigurator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +29,15 @@
 		CC9A33E2283257FA003C3AA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CC9A33E728325801003C3AA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC9A33EC28325801003C3AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCD68AF22832768B006742AF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		CCD68AF42832769E006742AF /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		CCD68AF6283276B2006742AF /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		CCD68AF8283277F7006742AF /* MainConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainConfigurator.swift; sourceTree = "<group>"; };
+		CCD68AFA2832786A006742AF /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		CCD68AFD28328055006742AF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		CCD68AFF28328070006742AF /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		CCD68B012832807D006742AF /* GameIneteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameIneteractor.swift; sourceTree = "<group>"; };
+		CCD68B032832809F006742AF /* GameConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfigurator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				CC9A33F228325AB3003C3AA0 /* MainModule */,
+				CCD68AFC2832802D006742AF /* GameModule */,
+				CCD68AF0283274E0006742AF /* Models */,
 				CC9A33F528325BA5003C3AA0 /* Services */,
 				CC9A33F328325AC8003C3AA0 /* SupportFiles */,
 				CC9A33F428325B5C003C3AA0 /* Resources */,
@@ -63,7 +83,12 @@
 		CC9A33F228325AB3003C3AA0 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
+				CCD68AF128327500006742AF /* Cell */,
 				CC9A33E2283257FA003C3AA0 /* MainViewController.swift */,
+				CCD68AF22832768B006742AF /* MainPresenter.swift */,
+				CCD68AF42832769E006742AF /* MainInteractor.swift */,
+				CCD68AF6283276B2006742AF /* MainRouter.swift */,
+				CCD68AF8283277F7006742AF /* MainConfigurator.swift */,
 			);
 			path = MainModule;
 			sourceTree = "<group>";
@@ -91,6 +116,40 @@
 			children = (
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CCD68AF0283274E0006742AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68AFA2832786A006742AF /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CCD68AF128327500006742AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CCD68AFC2832802D006742AF /* GameModule */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68B05283280B0006742AF /* Cell */,
+				CCD68AFD28328055006742AF /* GameViewController.swift */,
+				CCD68AFF28328070006742AF /* GamePresenter.swift */,
+				CCD68B012832807D006742AF /* GameIneteractor.swift */,
+				CCD68B032832809F006742AF /* GameConfigurator.swift */,
+			);
+			path = GameModule;
+			sourceTree = "<group>";
+		};
+		CCD68B05283280B0006742AF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,7 +223,16 @@
 			files = (
 				CC9A33E3283257FA003C3AA0 /* MainViewController.swift in Sources */,
 				CC9A33DF283257FA003C3AA0 /* AppDelegate.swift in Sources */,
+				CCD68B042832809F006742AF /* GameConfigurator.swift in Sources */,
 				CC9A33E1283257FA003C3AA0 /* SceneDelegate.swift in Sources */,
+				CCD68AF52832769E006742AF /* MainInteractor.swift in Sources */,
+				CCD68B022832807D006742AF /* GameIneteractor.swift in Sources */,
+				CCD68AFE28328055006742AF /* GameViewController.swift in Sources */,
+				CCD68AF9283277F7006742AF /* MainConfigurator.swift in Sources */,
+				CCD68AF32832768B006742AF /* MainPresenter.swift in Sources */,
+				CCD68AF7283276B2006742AF /* MainRouter.swift in Sources */,
+				CCD68B0028328070006742AF /* GamePresenter.swift in Sources */,
+				CCD68AFB2832786A006742AF /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
