@@ -12,4 +12,8 @@ extension UIFont {
     static func avenirNextBold48() -> UIFont? {
         UIFont(name: "AvenirNext-Bold", size: 48)
     }
+    
+    static func avenirNextBold24() -> UIFont? {
+        UIFont(name: "AvenirNext-Bold", size: 24)
+    }
 }
